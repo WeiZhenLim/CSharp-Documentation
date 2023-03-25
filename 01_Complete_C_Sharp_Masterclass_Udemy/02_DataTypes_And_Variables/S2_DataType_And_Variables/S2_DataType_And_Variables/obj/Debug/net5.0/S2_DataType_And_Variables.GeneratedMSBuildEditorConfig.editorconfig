@@ -1,0 +1,11 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = S2_DataType_And_Variables
+build_property.ProjectDir = C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\02_DataTypes_And_Variables\S2_DataType_And_Variables\S2_DataType_And_Variables\

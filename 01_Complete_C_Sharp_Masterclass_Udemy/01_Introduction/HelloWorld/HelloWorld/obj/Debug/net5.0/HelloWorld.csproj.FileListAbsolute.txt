@@ -1,0 +1,16 @@
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\bin\Debug\net5.0\HelloWorld.exe
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\bin\Debug\net5.0\HelloWorld.deps.json
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\bin\Debug\net5.0\HelloWorld.runtimeconfig.json
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\bin\Debug\net5.0\HelloWorld.runtimeconfig.dev.json
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\bin\Debug\net5.0\HelloWorld.dll
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\bin\Debug\net5.0\HelloWorld.pdb
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\HelloWorld.csproj.AssemblyReference.cache
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\HelloWorld.AssemblyInfoInputs.cache
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\HelloWorld.AssemblyInfo.cs
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\HelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\HelloWorld.dll
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\refint\HelloWorld.dll
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\HelloWorld.pdb
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\HelloWorld.genruntimeconfig.cache
+C:\Users\limzz\OneDrive\Desktop\Studies_Learning\07_C_Sharp\01_Udemy\01_Complete_C_Sharp_Masterclass\01_Introduction\HelloWorld\HelloWorld\obj\Debug\net5.0\ref\HelloWorld.dll
