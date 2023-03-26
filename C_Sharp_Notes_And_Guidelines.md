@@ -12,7 +12,7 @@ This is a C# documentation compiled by Lim Wei Zhen, which only covers the summa
 
 ### **Section 1.1: Integral**
 There are different data types for integral (whole number), such as :
-```csharp
+```cs
 // range from -128 to 127
 sbyte x = 120;
 
@@ -31,7 +31,7 @@ long x = 9000000000;
 ____
 ### **Section 1.2: Float**
 There are different data types for float (floating point value), such as :
-```csharp
+```cs
 // range from 1.5 x 10^-45 to 3.4 x 10^38, with 7-digit precision
 float x = 99.99f; 
 // Take note that "f" is added at the end of the numbers to tell C# that we are referring to float.
@@ -52,13 +52,13 @@ decimal x = 1.5m;
 ____
 ### **Section 1.3: Boolean**
 For boolean, it only allows for two statuses: **`true`**/**`false`**
-```csharp
+```cs
 bool switch = false;
 ```
 ____
 ### **Section 1.4: Unicode Characters And Strings**
 There are different data types for strings, such as :
-```csharp
+```cs
 // for single character or unicode
 char singleLetter = 'A';
 // Take note that single quote allows for single character literal or unicode
@@ -71,12 +71,12 @@ ____
 ### **Section 1.5: C# Standard Practice & Guidelines**
 Maintaining code is not easy, especially when it is poorly wrtiten and hard to understand, hence it is always a good practice to : 
 -  Create reasonable variable name.
-```csharp
+```cs
 // refer to user's age
 int userAge = 35;
 ```
 - Create proper method name.
-```csharp
+```cs
 // method to check internet connection
 void CheckInternetConnection(){
     //fancy networking code
@@ -87,13 +87,13 @@ void CheckInternetConnection(){
 There are multiple ways to include comments in C#, which are :
 1. Single-Line Comments :   
 Any text between **`//`** and the end of the line is ignored by C# (will not be executed)
-```csharp
+```cs
 // a bool to check if user is logged in
 bool isUserLoggedIn = true;
 ```
 2. Multiline Comments :  
 Any text between **`/*`** and **`*/`** will be ignored by C#.
-```csharp
+```cs
 /* these methods are responsible
 for storing user data and connecting 
 to the database. */
@@ -108,7 +108,7 @@ Typing **`///`** before a class or function to create documentation automaticall
 |\<returns>| Describe return type of a method |
 |\<value>| Describe value of a property |
 
-```csharp
+```cs
 /// <summary>
 /// Add class containing method for addition
 /// </summary>
@@ -151,7 +151,7 @@ To maintain consistency with Microsoft's .Net Framework, below are the common C#
 
 #### **1. Class & Method**
 Use **PascalCasing** for class names and method names.
-```csharp
+```cs
 public class ClientActivity
 {
     public void ClearStatistics()
@@ -169,7 +169,7 @@ public class ClientActivity
 
 #### **2. Variable & Method Arguments**
 Use **camelCasing** for local variables and method arguments.
-```csharp
+```cs
 public class UserLog
 {
     public void Add(LogEvent logEvent)
@@ -185,7 +185,7 @@ public class UserLog
 #### **3. Identifiers**
 **Do not** use **`Hungarian`** notataion or any other type identification in identifiers.
 
-```csharp
+```cs
 // Correct
 int counter;
 string name;
@@ -200,7 +200,7 @@ string strName;
 #### **4. Constants**
 **Do not** use Screaming Caps for constants or readonly variables.
 
-```csharp
+```cs
 // Correct
 public static const string ShippingType = "DropShip";
 
@@ -214,7 +214,7 @@ public static const string SHIPPINGTYPE = "DropShip";
 **Avoid** using **Abbreviations**.  
 Exceptions : Commonly used abbreviations such as Id, Xml, Ftp, Uri.
 
-```csharp
+```cs
 // Correct
 UserGroup userGroup;
 Assignment employeeAssignment;
@@ -234,7 +234,7 @@ UriPart uriPart;
 
 #### **6. Abbreviation Casing**
 Do use **PascalCasing** for abbreviations 3 characters or more (2 chars are both uppercase).
-```csharp
+```cs
 HtmlHelper htmlHelper;
 FtpTransfer ftpTransfer;
 UIControl uiControl;
@@ -246,7 +246,7 @@ UIControl uiControl;
 **Avoid** use **Underscores** in identifiers.  
 Exception: Prefix private static variables with an underscore.
 
-```csharp
+```cs
 // Correct
 public DateTime clientAppointment;
 public TimeSpan timeLeft;
@@ -263,7 +263,7 @@ private DateTime _registrationDate;
 
 #### **8. Type Names**
 Do use **predefined type names** instead of system type names like Int16, Single, UInt64, etc.
-```csharp
+```cs
 // Correct
 string firstName;
 int lastIndex;
@@ -280,7 +280,7 @@ Boolean isSaved;
 #### **9. Implicit Types**
 Do use implicit type **var** for local variable declarations.  
 Exception: primitive types (int, string, doulbe, etc) use predefined names.
-```csharp
+```cs
 var stream = File.Create(path);
 var customers = new Dictionary();
 
@@ -294,7 +294,7 @@ bool isCompleted;
 
 #### **10. Noun Class Names**
 Do use noun or noun phrases to name a class.
-```csharp
+```cs
 public class Employee
 {
 }
@@ -307,7 +307,7 @@ public class DocumentCollection
 
 #### **11. Interface**
 Do prefix interfaces with the letter **`I`**. Interface names are noun (phrases) or adjectives.
-```csharp
+```cs
 public interface IShape
 {
 }
@@ -321,7 +321,7 @@ public interface IShapeCollection
 #### **12. File Names**
 Do name source file according to their main classes.  
 Exception: File names with partial classess reflect their source or purpose, e.g. designer, generated, etc.
-```csharp
+```cs
 // Located in Task.cs
 public partial class Task
 {
@@ -339,7 +339,7 @@ public partial class Task
 
 #### **13. Namespaces**
 Do organize namespaces with a clearly defined structure
-```csharp
+```cs
 // Examples
 namespace Company.Product.Module.SubModule {}
 namespace Product.Module.Component {}
@@ -350,7 +350,7 @@ namespace Product.Layer.Module.Group {}
 
 #### **14. Curly Brackets**
 Do vertically align curly brackets.
-```csharp
+```cs
 // Correct
 class Program
 {
@@ -364,7 +364,7 @@ class Program
 
 #### **15. Member Variables**
 Do declare all member variables at the top of a class, with static variables at the very top.
-```csharp
+```cs
 // Correct
 public class Account
 {
@@ -389,7 +389,7 @@ public class Account
 #### **16. Enums**
 Do use singular names for enums.  
 Exception: bit field enums.
-```csharp
+```cs
 // Correct
 public enum Color
 {
@@ -418,7 +418,7 @@ public enum Dockings
 #### **17. Enum Types**
 **Do not** explicitly specify a type of an enum or values of enums (except bit fields)
 
-```csharp
+```cs
 // Don't
 public enum Direction : long
 {
@@ -443,7 +443,7 @@ public enum Direction
 #### **18. Enum Suffix**
 **Do not** suffix enum names with Enum.
 
-```csharp
+```cs
 // Don't
 public enum CoinEnum
 {
@@ -475,7 +475,7 @@ Good layout uses formatting to emphasize the structure of your code and to make 
 - If continuation lines are not indented automatically, ident them one tab stop (four spaces).
 - Add at least one blank in between method definitions and property definations.
 - Use parentheses to make clauses in an expression apparent, as shown in the following code.
-```csharp
+```cs
 if ((val1 > val2) && (val1 > val3))
 {
     // Take appropriate action.
@@ -485,7 +485,7 @@ if ((val1 > val2) && (val1 > val3))
 
 ###  ***Place Using Directives Outside Namespace Declaration*** 
 When a using directive is outside a namespace devlaration, that imported namespace is its fully qualified name. In addition to that, it is much more easier to use, read, and less prone to error.
-```csharp
+```cs
 using Azure;
 
 namespace CoolStuff.AwesomeFeature
@@ -501,7 +501,7 @@ The common commenting conventions are :
 - Begin comment text with an uppercase letter.
 - End comment text with a period.
 - Insert one space between the comment delimiter (//) and the comment text, as shown in the following example.
-```csharp
+```cs
 // The following declaration creates a query. It does not run
 // the query.
 ```
@@ -514,11 +514,11 @@ The following sections describe practices that the C# team follow to prepare cod
 
 #### **1. String Data Type**
 Use [string interpolation](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated) to concatenate short strings, as shown in the following code.
-```csharp
+```cs
 string displayname = $"{nameList[n].LastName}, {nameList[n].FirstName}";
 ```
 To append strings in loops, especially when you're working with large amounts of text, use a [StringBuilder](https://learn.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-7.0) object.
-```csharp
+```cs
 var phrase = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalala";
 var manyPhrases = new StringBuilder();
 for (var i = 0; i < 10000; i++)
@@ -531,18 +531,18 @@ for (var i = 0; i < 10000; i++)
 
 #### **2. Arrays**
 Use the concise syntax when you initialize arrays on the declaration line. In the following example, note that you can't use **`var`** instead of  **`string[]`**.
-```csharp
+```cs
 string[] vowels1 = {"a","e","i","o","u"};
 ```
 If you use explicit instatiation, you can use **`var`**.
-```csharp
+```cs
 var vowels2 = new string[] {"a","e","i","o","u"};
 ```
 <br/>
 
 #### **3. `try-catch` And `using` Statements In Exception Handling**
 Use a **`try-catch`** statement for most exception handling.
-```csharp
+```cs
 static string GetValueFromArray(string[] array, int index)
 {
     try
@@ -558,7 +558,7 @@ static string GetValueFromArray(string[] array, int index)
 ```
 Simplify your code by using the C# [using statement](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/using). If you have a [try-finally](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-finally) statement in which the only code in the finally block is a call to the [Dispose](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable.dispose?view=net-7.0) method, use a **`using`** statement instead.  
 In the following example, the **`try-finally`** statement only calls **`Dispose`** in the **`finally`** block.
-```csharp
+```cs
 Font font1 = new Font("Arial", 10.0f);
 try
 {
@@ -573,14 +573,14 @@ finally
 }
 ```
 You can do the same thing with a **`using`** statement.
-```csharp
+```cs
 using (Font font2 = new Font("Arial",10.0f))
 {
     byte charset2 = font2.GdiCharSet;
 }
 ```
 Use the new [using syntax](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/using) that doesn't require braces:
-```csharp
+```cs
 using Font font3 = new Font("Arial",10.0f)
 byte charset3 = font3.GdiCharSet;
 ```
@@ -588,7 +588,7 @@ byte charset3 = font3.GdiCharSet;
 
 #### **4. `&&` And `||` Operators**
 To avoid exceptions and increase performance by skipping unnecessary comparisons, use **`&&`** instead of **`&`** and **`||`** instead of **`|`** when you perform comparisons, as shown in the following example.
-```csharp
+```cs
 Console.Write("Enter a dividend: ");
 int dividend = Convert.ToInt32(Console.ReadLine());
 
@@ -608,24 +608,24 @@ else
 
 #### **5. `new` Operator**
 Use one of the concise forms of object instantiation, as shown in the following declarations. The second example shows syntax that is available starting in C# 9.
-```csharp
+```cs
 var instance1 = new ExampleClass();
 ```
-```csharp
+```cs
 ExampleClass instance2 = new();
 ```
 The preceding declarations are equivalent to the following declaration.
-```csharp
+```cs
 ExampleClass instance2 = new ExampleClass();
 ```
 
 Use object initializers to simplify object creation, as shown in the following example.
-```csharp
+```cs
 var instance3 = new ExampleClass { Name = "Desktop", ID = 37414,
     Location = "Redmond", Age = 2.3 };
 ```
 The following example sets the same properties as the preceding example but doesn't use initializers.
-```csharp
+```cs
 var instance4 = new ExampleClass();
 instance4.Name = "Desktop";
 instance4.ID = 37414;
@@ -636,7 +636,7 @@ instance4.Age = 2.3;
 
 #### **6. Event Handling**
 If you're defining an event handler that you don't need to remove later, use a lambda expression.
-```csharp
+```cs
 public Form2()
 {
     this.Click += (s, e) =>
@@ -647,7 +647,7 @@ public Form2()
 }
 ```
 The lambda expression shortens the following traditional definition.
-```csharp
+```cs
 public Form1()
 {
     this.Click += new EventHandler(Form1_Click);
@@ -666,7 +666,7 @@ In C#, data types are categorized based on how they store their value in the mem
 
 ###  ***Value Type*** 
 A data type is a value type if it holds a data value within its own memory space. It means the variable of these data types directly cotain values. 
-```csharp
+```cs
 int i = 100;
 ```
 The following data types are all of value type:
@@ -688,7 +688,7 @@ When you pass a value type variable from one method to another, the system creat
 
 ###  ***Reference Type*** 
 Unlike value types, a reference type doesn't store its value directly. Instead, it stores the address where the value is being stored. In other words, a reference type contains a pointer to another memory location that holds the data. 
-```csharp
+```cs
 string s = "Hello World!!";
 ```
 The folloings are reference type data types:
@@ -708,7 +708,7 @@ The process of converting the value of one type (int, float, double, etc.) to an
 2. Explicit Type Conversions
 
 ###  ***Implicit Conversion*** 
-```csharp
+```cs
 int num = 1223456;
 long bigNum = num;
 
@@ -717,7 +717,7 @@ double myNewDouble = myFloat;
 ```
 
 ###  ***Explicit Conversion*** 
-```csharp
+```cs
 double myDouble = 13.37;
 int myInt;
 
@@ -725,7 +725,7 @@ myInt = (int)myDouble;
 ```
 
 ###  ***Type Conversion*** 
-```csharp
+```cs
 string myString = myDouble.ToString();
 ```
 
