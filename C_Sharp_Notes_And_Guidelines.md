@@ -55,11 +55,7 @@ For boolean, it only allows for two statuses: **`true`**/**`false`**
 ```csharp
 bool switch = false;
 ```
-<br/>
-
 ____
-<br/>
-
 ### **Section 1.4: Unicode Characters And Strings**
 There are different data types for strings, such as :
 ```csharp
@@ -71,11 +67,7 @@ char singleLetter = 'A';
 string username = "WeiZhen123"
 // Take note that when defining string data type, the "s" is lower case
 ```
-<br/>
-
 ____
-<br/>
-
 ### **Section 1.5: C# Standard Practice & Guidelines**
 Maintaining code is not easy, especially when it is poorly wrtiten and hard to understand, hence it is always a good practice to : 
 -  Create reasonable variable name.
@@ -91,8 +83,6 @@ void CheckInternetConnection(){
 }
 ```
 - Include comments.
-
-<br/>
 
 There are multiple ways to include comments in C#, which are :
 1. Single-Line Comments :   
@@ -143,13 +133,11 @@ class add
 Preview of XML Documentation Comments : 
 <p align="center"> 
 
-![Alt text](XML_Documentation_Comments_Preview.png)
+![Alt text](Image/XML_Documentation_Comments_Preview.png)
 
 </p align="center">
-<br/>
 
 ____
-<br/>
 
 ### **Section 1.6: C# Coding Conventions**
 Coding conventions are important as they serve the following purposes:
@@ -164,12 +152,8 @@ For a more in-depth explainations on the C# coding conventions, refer to the lin
 
 [C# Coding Standards Best Practices from dofactory.com - Recommend](https://www.dofactory.com/csharp-coding-standards)
 
-<br/>
-
 ### <u> ***Naming Conventions*** </u>
 To maintain consistency with Microsoft's .Net Framework, below are the common C# naming conventions and best practices. Use these in your own projects and/or adjust these to your own needs.
-
-<br/>
 
 #### **Class & Method**
 Use **PascalCasing** for class names and method names.
@@ -187,8 +171,6 @@ public class ClientActivity
 }
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework and easy to read.
-<br/>
-<br/>
 
 #### **Variable & Method Arguments**
 Use **camelCasing** for local variables and method arguments.
@@ -203,8 +185,6 @@ public class UserLog
 }
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework and easy to read.
-<br/>
-<br/>
 
 #### **Identifiers**
 <span style="color:red"> **Do not** </span> use **`Hungarian`** notataion or any other type identification in identifiers.
@@ -219,8 +199,6 @@ int iCounter;
 string strName; 
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework. In addition, the Visual Studio IDE makes it very easy to determine the type of a variable (via tooltips). It is best to avoid type indicators in identifiers. 
-<br/>
-<br/>
 
 #### **Constants**
 <span style="color:red"> **Do not** </span> use Screaming Caps for constants or readonly variables.
@@ -233,8 +211,6 @@ public static const string ShippingType = "DropShip";
 public static const string SHIPPINGTYPE = "DropShip";
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework. Caps grap too much attention.
-<br/>
-<br/>
 
 #### **Abbreviations**
 <span style="color:red"> **Avoid** </span> using **Abbreviations**.  
@@ -256,8 +232,6 @@ FtpHelper ftpHelper;
 UriPart uriPart;
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework. It prevents inconsistent abbreviations by different developers.
-<br/>
-<br/>
 
 #### **Abbreviation Casing**
 Do use **PascalCasing** for abbreviations 3 characters or more (2 chars are both uppercase).
@@ -267,8 +241,6 @@ FtpTransfer ftpTransfer;
 UIControl uiControl;
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework. Caps would grap visually too much attention.
-<br/>
-<br/>
 
 #### **No Underscores**
 <span style="color:red"> **Avoid** </span> use **Underscores** in identifiers.  
@@ -287,8 +259,6 @@ public TimeSpan time_left;
 private DateTime _registrationDate;
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework. It makes code more natural to read (without 'slut). Also avoids underline stress, i.e. inability to see underline.
-<br/>
-<br/>
 
 #### **Type Names**
 Do use **predefined type names** instead of system type names like Int16, Single, UInt64, etc.
@@ -304,8 +274,6 @@ Int32 lastIndex;
 Boolean isSaved;
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework. It makes code more natural to read.
-<br/>
-<br/>
 
 #### **Implicit Types**
 Do use implicit type **var** for local variable declarations.  
@@ -320,8 +288,6 @@ string timeSheet;
 bool isCompleted;
 ```
 **Why :** To removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips.
-<br/>
-<br/>
 
 #### **Noun Class Names**
 Do use noun or noun phrases to name a class.
@@ -334,8 +300,6 @@ public class DocumentCollection
 }
 ```
 **Why :** Consistent with the Microsoft's .NET Framework. Makes classes easy to remember.
-<br/>
-<br/>
 
 #### **Interface**
 Do prefix interfaces with the letter **`I`**. Interface names are noun (phrases) or adjectives.
@@ -348,8 +312,6 @@ public interface IShapeCollection
 }
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework.
-<br/>
-<br/>
 
 #### **File Names**
 Do name source file according to their main classes.  
@@ -368,8 +330,6 @@ public partial class Task
 } 
 ```
 **Why :** To be consistent with the Microsoft practices. Files are alphabetically sorted and partial classess remain adjacent.
-<br/>
-<br/>
 
 #### **Namespaces**
 Do organize namespaces with a clearly defined structure
@@ -380,8 +340,6 @@ namespace Product.Module.Component {}
 namespace Product.Layer.Module.Group {}
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework. Maintains good organization of your code base.
-<br/>
-<br/>
 
 #### **Curly Brackets**
 Do vertically align curly brackets.
@@ -395,8 +353,6 @@ class Program
 }
 ```
 **Why :** Microsoft has a different standard, but developers have overwhelmingly preferred vertically aligned brackets.
-<br/>
-<br/>
 
 #### **Member Variables**
 Do declare all member variables at the top of a class, with static variables at the very top.
@@ -420,8 +376,6 @@ public class Account
 }
 ```
 **Why :** Generally accepted practice that prevents the need to hunt for variable declarations.
-<br/>
-<br/>
 
 #### **Enums**
 Do use singular names for enums.  
@@ -450,8 +404,6 @@ public enum Dockings
 }
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework and makes the code more natural to read. Plural flags because enum can hold multiple values (using bitwise 'OR').
-<br/>
-<br/>
 
 #### **Enum Types**
 <span style="color:red"> **Do not** </span> explicitly specify a type of an enum or values of enums (except bit fields)
@@ -476,8 +428,6 @@ public enum Direction
 }
 ```
 **Why :** Create confusion when relying on actual types and values.
-<br/>
-<br/>
 
 #### **Enum Suffix**
 <span style="color:red"> **Do not** </span> suffix enum names with Enum.
@@ -504,8 +454,6 @@ public enum Coin
 }
 ```
 **Why :** To be consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in indentifiers.
-<br/>
-<br/>
 
 ### <u> ***Layout Conventions*** </u>
 Good layout uses formatting to emphasize the structure of your code and to make the code easier to read. Microsoft examples and samples conform to the following conventions : 
@@ -521,7 +469,6 @@ if ((val1 > val2) && (val1 > val3))
     // Take appropriate action.
 }
 ```
-<br/>
 
 ### <u> ***Place Using Directives Outside Namespace Declaration*** </u>
 When a using directive is outside a namespace devlaration, that imported namespace is its fully qualified name. In addition to that, it is much more easier to use, read, and less prone to error.
@@ -533,7 +480,6 @@ namespace CoolStuff.AwesomeFeature
     public class Awesome
 }
 ```
-<br/>
 
 ### <u> ***Commenting Conventions*** </u>
 The common commenting conventions are :
@@ -547,12 +493,9 @@ The common commenting conventions are :
 ```
 - Do not create formatted blocks of asterisks around comments.
 - Ensure all public members have the necessary XML comments providing appropriate descriptions about their behavior.
-<br/>
-<br/>
 
 ### <u> ***Language Guidelines*** </u>
 The following sections describe practices that the C# team follow to prepare code examples and samples.
-<br/>
 
 #### **String Data Type**
 Use [string interpolation](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated) to concatenate short strings, as shown in the following code.
@@ -569,7 +512,6 @@ for (var i = 0; i < 10000; i++)
 }
 //Console.WriteLine("tra" + manyPhrases);
 ```
-<br/>
 
 #### **Arrays**
 Use the concise syntax when you initialize arrays on the declaration line. In the following example, note that you can't use **`var`** instead of  **`string[]`**.
@@ -580,7 +522,6 @@ If you use explicit instatiation, you can use **`var`**.
 ```csharp
 var vowels2 = new string[] {"a","e","i","o","u"};
 ```
-<br/>
 
 #### **`try-catch` And `using` Statements In Exception Handling**
 Use a **`try-catch`** statement for most exception handling.
@@ -626,7 +567,6 @@ Use the new [using syntax](https://learn.microsoft.com/en-us/dotnet/csharp/langu
 using Font font3 = new Font("Arial",10.0f)
 byte charset3 = font3.GdiCharSet;
 ```
-<br/>
 
 #### **`&&` And `||` Operators**
 To avoid exceptions and increase performance by skipping unnecessary comparisons, use **`&&`** instead of **`&`** and **`||`** instead of **`|`** when you perform comparisons, as shown in the following example.
@@ -646,7 +586,6 @@ else
     Console.WriteLine("Attempted division by 0 ends up here.");
 }
 ```
-<br/>
 
 #### **`new` Operator**
 Use one of the concise forms of object instantiation, as shown in the following declarations. The second example shows syntax that is available starting in C# 9.
@@ -674,7 +613,6 @@ instance4.ID = 37414;
 instance4.Location = "Redmond";
 instance4.Age = 2.3;
 ```
-<br/>
 
 #### **Event Handling**
 If you're defining an event handler that you don't need to remove later, use a lambda expression.
@@ -700,17 +638,11 @@ void Form1_Click(object? sender, EventArgs e)
     MessageBox.Show(((MouseEventArgs)e).Location.ToString());
 }
 ```
-<br/>
-
 ____
-<br/>
-
 ### **Section 1.7: Value Type And Reference Type**
 In C#, data types are categorized based on how they store their value in the memory. C# includes the following categories of data types:
 - Value type.
 - Reference type.
-<br/>
-<br/>
 
 ### <u> ***Value Type*** </u>
 A data type is a value type if it holds a data value within its own memory space. It means the variable of these data types directly cotain values. 
@@ -727,14 +659,11 @@ The following data types are all of value type:
 - uimt
 - ulong
 - ushort
-<br/>
 
 #### **Passing Value Type Variables**
 When you pass a value type variable from one method to another, the system creates a separate copy of a variable in another method. 
 
 **If value got changed in the method, it wouldn't affect the variable in another method**.
-<br/>
-<br/>
 
 ### <u> ***Reference Type*** </u>
 Unlike value types, a reference type doesn't store its value directly. Instead, it stores the address where the value is being stored. In other words, a reference type contains a pointer to another memory location that holds the data. 
@@ -746,24 +675,16 @@ The folloings are reference type data types:
 - Arrays (even if their elements are value types)
 - Class
 - Delegate
-<br/>
 
 #### **Passing Reference Type Variables**
 When you pass a reference type variable from one method to another, it doesn't create a new copy; instead, it passes the variable's address.
 
 **If we change the value of a variable in a method, it will also be reflected in the calling method**.
-
-<br/>
-
 ____
-<br/>
-
 ### **Section 1.8: Implicit And Explicit Conversion**
 The process of converting the value of one type (int, float, double, etc.) to another type is known as type conversion. In C#, there are two basic types of type conversion: 
 1. Implicit Type Conversions
 2. Explicit Type Conversions
-
-<br/>
 
 ### <u> ***Implicit Conversion*** </u>
 ```csharp
@@ -773,7 +694,6 @@ long bigNum = num;
 float myFloat = 13.37;
 double myNewDouble = myFloat;
 ```
-<br/>
 
 ### <u> ***Explicit Conversion*** </u>
 ```csharp
@@ -782,7 +702,6 @@ int myInt;
 
 myInt = (int)myDouble;
 ```
-<br/>
 
 ### <u> ***Type Conversion*** </u>
 ```csharp
