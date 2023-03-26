@@ -32,10 +32,7 @@ long x = 9000000000;
 
 **Use the smallest data type your value fits into.**
 
-<br/>
-
 ____
-<br/>
 
 ### **Section 1.2: Float**
 There are different data types for float (floating point value), such as :
