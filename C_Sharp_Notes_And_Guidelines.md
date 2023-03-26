@@ -707,7 +707,9 @@ The process of converting the value of one type (int, float, double, etc.) to an
 1. Implicit Type Conversions
 2. Explicit Type Conversions
 
-###  ***Implicit Conversion*** 
+###  ***Implicit Conversion***
+In implicit type conversion, the C# complier automatically converts one type to another.  
+Generally, smaller types like `int` (having less memory size) are automatically converted to larger types like `double` (having larger memory size).
 ```cs
 int num = 1223456;
 long bigNum = num;
