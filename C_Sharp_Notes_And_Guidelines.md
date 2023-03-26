@@ -4,7 +4,7 @@ Most the contents below are created with reference to "Complete C# Materclass" f
 If you are interested to learn more, click on the link below to visit the website.  
 
 [Complete C# Masterclass](https://www.udemy.com/course/complete-csharp-masterclass/)
-
+____
 ## **Introduction**
 This is a C# documentation compiled by Lim Wei Zhen, which only covers the summary of codes, standard practices, and examples. 
 
