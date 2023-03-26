@@ -110,7 +110,7 @@ Typing **`///`** before a class or function to create documentation automaticall
 |\<returns>| Describe return type of a method |
 |\<value>| Describe value of a property |
 
-</p align="center">
+</p>
 
 ```csharp
 /// <summary>
@@ -135,7 +135,7 @@ Preview of XML Documentation Comments :
 
 ![Alt text](Image/XML_Documentation_Comments_Preview.png)
 
-</p align="center">
+</p>
 
 ____
 
@@ -187,7 +187,7 @@ public class UserLog
 **Why :** To be consistent with the Microsoft's .NET Framework and easy to read.
 
 #### **Identifiers**
-<span style="color:red"> **Do not** </span> use **`Hungarian`** notataion or any other type identification in identifiers.
+<font style="color:red"> **Do not** </font> use **`Hungarian`** notataion or any other type identification in identifiers.
 
 ```csharp
 // Correct
