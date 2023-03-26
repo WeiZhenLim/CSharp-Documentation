@@ -49,12 +49,7 @@ decimal x = 1.5m;
 - **Use *`float`* if high demands for processing powers is required.**
 - **Use *`double`* for real world values (except money calculations).**
 - **Use *`decimal`* for high level of accuracy.**
-
-<br/>
-
 ____
-<br/>
-
 ### **Section 1.3: Boolean**
 For boolean, it only allows for two statuses: **`true`**/**`false`**
 ```csharp
