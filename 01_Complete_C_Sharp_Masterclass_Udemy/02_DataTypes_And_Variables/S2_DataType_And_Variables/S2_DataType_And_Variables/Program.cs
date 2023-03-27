@@ -37,7 +37,17 @@ namespace S2_DataType_And_Variables
             float fDiv = f1 / f2;
 
             Console.WriteLine("f1/f2 is " + fDiv);
-            Console.Read(); 
+
+            string stringForFloat = "0.85";
+            string stringForInt = "12345";
+            float numForFloat = float.Parse(stringForFloat);
+            int numForInt = int.Parse(stringForInt);
+
+            Console.WriteLine(numForFloat);
+            Console.WriteLine(numForInt);
+            Console.WriteLine(numForInt + numForFloat);
+            Console.Read();
+
         }
 
     }

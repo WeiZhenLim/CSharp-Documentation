@@ -719,15 +719,110 @@ double myNewDouble = myFloat;
 ```
 
 ###  ***Explicit Conversion*** 
+In explicit type conversion, we explicitly convert one type to another.  
+Generally, larger types like `double` (having large memory size) are converted to smaller types like `int` (having small memory size).
 ```cs
 double myDouble = 13.37;
 int myInt;
 
 myInt = (int)myDouble;
 ```
+____
+### **Section 1.9: C# Type Conversion using Convert Class**
+In C#, we can use the `Convert` class to perform type conversion. The `Convert` class provides various methods to convert one type to another.
 
-###  ***Type Conversion*** 
+|Method|Description|
+|---|---|
+|`ToBoolean()`|Converts a type to a `Boolean` value|
+|`ToChar()`|Covnerts a type to a `char` type|
+|`ToDouble()`|Converts a type to a `double` type|
+|`ToInt16()`|Converts a type to a 16-bit `int` type|
+|`ToString()`|Converts a type to a `string`|
+
 ```cs
 string myString = myDouble.ToString();
 ```
+____
+### **Section 1.10: C# Type Conversion using Parse()**
+In C#, we can also use the `Parse()` method to perform type conversion.  
+Generally, while performing type conversion between non-compatible types like `int` and `string`, we use `Parse()`.
+```cs
+string myString = "15";
+string mySecondString = "13";
+string result = myString + mySecondString;
+// If .Parse() is not use, result = "1513"
 
+int num1 = Int32.Parse(myString);
+int num2 = Int32.Parse(mySecondString);
+int resultInt = num1 + num2
+// After .Parse() is use, resultInt = "28"
+```
+____
+### **Section 1.11: String Manipulation**
+There are different ways of manipulating string, and in this section, we are going to look at:
+- String Concatenation
+- String Formatting
+- String Interpolation
+- Verbatim Strings
+
+Tips: Try to stick with one style throughout your project to maintain consistency.
+
+For this section, the following variables will be used to explain the abovementioned methods of string manipulations.
+```cs
+// define few variables
+int age = 31;
+string name = "Alfonso";
+string job = "Developer";
+```
+
+### ***String Concatenation***
+By using the `+` sign, we can concatenate the strings. Take note that in C#, the concatenation of strings also works with integers, which is different in other programming language.
+
+```cs
+Console.WriteLine("String Concatenation");
+Console.WriteLine("Hello my name is " + name + ", I am " + age + "years old")
+```
+
+### ***String Formatting***
+The string are being concatenate using index. Take note that the index starts from 0, which is similar to some programming language.
+
+```cs
+Console.WriteLine("String Formatting");
+Console.WriteLine("Hello my name is {0}, I am (1) years old. I'm a {2}", name, age, job);
+```
+
+### ***String Interpolation***
+String Interpolation uses `$` at the start which will allow us to write our variable in `{}`, which is similar to the `print(f'Text')` in Python.
+
+```cs
+Console.WriteLine("String Interpolation");
+COnsole.WriteLine($"Hello my name is {name}, I am {age} years old");
+```
+I personally prefer this method of manipulating the string as it is more straightforward and neat.
+
+### ***Verbatim Strings***
+Verbatim strings start with `@` and tells the compiler to take the string literally and ignore any spaces and escape characters like `\n` (Line Break).
+
+```cs
+Console.WriteLine("Verbatim Strings");
+Console.WriteLine(@"ABCDEFG.
+ASFSAFASDASDSADASDASD. AdDSASDASDASD
+ 
+ 
+ADSADASDSADAS ASDASDASD ADS ASD ASDA S DAD SADA.
+ASDASDASD D ASDQW RFSA R WQ QWR WQR WQ RWQR,
+REWQEQWEQWEQWEQWEQWE EASD SAD ASDS ADSA D");
+```
+However, verbatum strings is commonly used to write file paths. Instead of using `\\`, we can just add `@` at the beginning of the string. For example,
+
+```cs
+Console.WriteLine(@"C:\User\Admin\Desktop\Cool\CoolWallpaper.png");
+```
+Reference to the code block above, if we were to remove the `@`, we will get an error because \U, \A, \D and etc. are not valid escape characters.
+
+Do take note that, verbatim strings will bypass valid escape characters. For example,
+
+```cs
+Console.WriteLine(@"Hahaha \n You have to work now!");
+```
+With reference to the code block above, the results printed on the console will ignore the escape character. Hence, line break will not appear in the result.
