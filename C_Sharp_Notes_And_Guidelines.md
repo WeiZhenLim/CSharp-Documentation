@@ -685,6 +685,7 @@ When you pass a value type variable from one method to another, the system creat
 
 **If value got changed in the method, it wouldn't affect the variable in another method**.
 <br/>
+<br/>
 
 ###  ***Reference Type*** 
 Unlike value types, a reference type doesn't store its value directly. Instead, it stores the address where the value is being stored. In other words, a reference type contains a pointer to another memory location that holds the data. 
@@ -774,6 +775,7 @@ int age = 31;
 string name = "Alfonso";
 string job = "Developer";
 ```
+<br/>
 
 ### ***String Concatenation***
 By using the `+` sign, we can concatenate the strings. Take note that in C#, the concatenation of strings also works with integers, which is different in other programming language.
@@ -782,6 +784,7 @@ By using the `+` sign, we can concatenate the strings. Take note that in C#, the
 Console.WriteLine("String Concatenation");
 Console.WriteLine("Hello my name is " + name + ", I am " + age + "years old")
 ```
+<br/>
 
 ### ***String Formatting***
 The string are being concatenate using index. Take note that the index starts from 0, which is similar to some programming language.
@@ -790,6 +793,7 @@ The string are being concatenate using index. Take note that the index starts fr
 Console.WriteLine("String Formatting");
 Console.WriteLine("Hello my name is {0}, I am (1) years old. I'm a {2}", name, age, job);
 ```
+<br/>
 
 ### ***String Interpolation***
 String Interpolation uses `$` at the start which will allow us to write our variable in `{}`, which is similar to the `print(f'Text')` in Python.
@@ -799,6 +803,7 @@ Console.WriteLine("String Interpolation");
 COnsole.WriteLine($"Hello my name is {name}, I am {age} years old");
 ```
 I personally prefer this method of manipulating the string as it is more straightforward and neat.
+<br/>
 
 ### ***Verbatim Strings***
 Verbatim strings start with `@` and tells the compiler to take the string literally and ignore any spaces and escape characters like `\n` (Line Break).
