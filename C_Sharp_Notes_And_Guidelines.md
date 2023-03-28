@@ -804,6 +804,7 @@ COnsole.WriteLine($"Hello my name is {name}, I am {age} years old");
 ```
 I personally prefer this method of manipulating the string as it is more straightforward and neat.
 <br/>
+<br/>
 
 ### ***Verbatim Strings***
 Verbatim strings start with `@` and tells the compiler to take the string literally and ignore any spaces and escape characters like `\n` (Line Break).
@@ -831,3 +832,41 @@ Do take note that, verbatim strings will bypass valid escape characters. For exa
 Console.WriteLine(@"Hahaha \n You have to work now!");
 ```
 With reference to the code block above, the results printed on the console will ignore the escape character. Hence, line break will not appear in the result.
+____
+### **Section 1.12: String And String Functions**
+**String** is an object of the System.String class. In programming terms, string means sequence of characters.
+
+**Functions** of the String class are used to manipulate and to perform various actions on given string. 
+
+In this section, we will only discuss some of the string **Functions** that is commonly used:
+1. `SubString(int32)` - Used to get the SubString from the string, starting from the specified index.
+2. `ToLower()` - Used to conver the string to lowercase.
+3. `ToUpper()` - Used to convert the string to uppercase.
+4. `Trim()` - Used to trim all leading and trailling white space from the string.
+5. `IndexOf(string)` - Used to get the first occurrence of the string or character inside the string.
+6. `IsNullOrWhiteSpace` - Returns true if the string is either null or is blank else it returns false.
+<br/>
+
+Example of Program demonstrating string functions:
+```cs
+static void Main(string[] args){
+    string firstName = "Denis";
+    string lastName = "Panjuta";
+    string fullName = string.Concat(" ",firstName,lastName," ");
+    Console.WriteLine(firstName.Substring(2)); // output: "nis"
+    Console.WriteLine(firstName.ToLower()); // output: "denis"
+    Console.WriteLine(firstName.ToUpper()); // output: "DENIS"
+    Console.WriteLine(fullName.Trim()): // output: "DennisPanjuta"
+    Console.WriteLine(fullName.IndexOf('e')); // output: 1
+    Console.WriteLine(String.IsNullOrWhiteSpace(firstName)); // output: false
+}
+```
+
+Other than the functions mentioned above, there is also another functions that is commonly used and useful, which is the `String.Format` function.
+
+In C#, `String.Format` method is used to insert the object or variable value inside any string. WIth the `String.Format`, we can replace the value in the specified format. 
+
+Syntax : 
+```cs
+String.Format("any string {index}", object);
+```
