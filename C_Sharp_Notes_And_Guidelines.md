@@ -870,3 +870,53 @@ Syntax :
 ```cs
 String.Format("any string {index}", object);
 ```
+____
+### **Section 1.13: Constant**
+Constants are immutable values which are known at compile time and do not change for the life of the program.
+```cs
+const double PI = 3.14159265359;
+```
+____
+## **Section 2.0: Functions/Methods**
+### **Section 2.1: Methods**
+A method is a code block that contains a series of statements. A program causes the statements to be executed by calling the method and specifying any required method arguments.
+
+In C#, every executed instruction is performed in the context of a method. The Main method is the entry point for every C# application and it is called by the common language runtime (CLR) when the program is started.  
+
+To create a method, the syntax shall be having the following framework:
+```cs
+<Access Specifier><Return Type><Method Name>(Parameter List)
+{
+    Method Body 
+}
+```
+The meaning of each syntax is as following:
+- `Access Specifier` : Determine the visibility of a variable or a method from another class.
+- `Return Type` : A method may return a value. The return type is the data type of the value the method returns. If the method is not returning any values, then the return type is void.
+- `Method Name` : Method name is a unique identifier and it is case sensitive. It cannot be same as any other identifier declared in the class.
+- `Parameter List` : Enclosed between parentheses, the parameters are used to pass and receive data from a method. The parameter list refers to the type, order, and number of the parameters of a method. Parameters are optional; that is, a method may contain no parameters.
+- `Method Body` : Contains the set of instructions needed to complete the required activity.
+
+Example:
+```cs
+public int Add(int num1, int num2)
+{
+    int result = num1 + num2
+    return result;
+}
+```
+____
+### **Section 2.2: Void Method**
+`void` is used as the return type of a method (or a local function) to specify that the method doesn't return a value.
+```cs
+public static void Display(string myInput)
+{
+
+    Console.WriteLine(myInput);
+}
+```
+`void` can also used as a referent type to declare a pointer to an unknown type. For more information, see [Pointer types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/void). 
+
+However, do take note that `void` cannot be used as the type of variable.
+____
+### **Section 2.3: Methods With Return Value & Parameters**
