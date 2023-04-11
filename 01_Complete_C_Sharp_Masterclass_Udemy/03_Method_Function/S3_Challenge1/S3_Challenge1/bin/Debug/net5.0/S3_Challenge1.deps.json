@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "S3_Challenge1/1.0.0": {
+        "runtime": {
+          "S3_Challenge1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "S3_Challenge1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
