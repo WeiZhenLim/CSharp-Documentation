@@ -1466,7 +1466,7 @@ for (initialization; condition; iteration)
 }
 ```
 
-The `initialization` statement is executed once at the beginning of the loop. It is typically used to initialize a counter variable, although it can be any valid statement. The `condition` is evaluated at the beginning of each iteration, and if it is true, the code inside the loop is executed. After each iteration, the `iteration` statement is excuted.
+The `initialization` statement is executed once at the beginning of the loop. It is typically used to initialize a counter variable, although it can be any valid statement. The `condition` is evaluated at the beginning of each iteration, and if it is true, the code inside the loop is executed. After each iteration, the `iteration` statement is executed.
 
 Here's an example of using a `for` loop to iterate over an array of integers and print each value :
 
@@ -1624,15 +1624,332 @@ In this example, the `Person` class has two private fields (`name` and `age`) an
 To access a property of an object of this class, you would use dot notation:
 
 ```cs
-Person person = new Person();
-person.Name = "John";
-person.Age = 30;
+Person human = new Person();
+human.Name = "John";
+human.Age = 30;
+human.SayHello();
 ```
 
 In this example, we create a new `Person` object and set its `Name` and `Age` properties to "John" and 30 respectively. Note that when you set a property, the corresponding `set` accessor is called and the new value is assigned to the corresponding field. Similarly, when you read a property, the corresponding `get` accessor is called and the value of the corresponding field is returned.
+
 ____
 
-### **Section 5.2: Instance Variable And Local Variable**
+### **Section 5.2: Access Modifiers Types**
+
+Access modifiers specify the accessibility of an object and all of its members in the C# project. Hence, **they help enforce encapsulation by limiting the scope of members and protecting them from unintended access or modification**. Moreover, all the C# types have access modifiers implemented, even if they are not stated (default access modifier is applied).
+
+C# provides four types of access modifiers:
+
+- private
+- public
+- protected
+- internal
+
+and two combinations:
+
+- protected-internal
+- private-protected
+
+Each of these access modifiers provides a different level of accessibility and visibility, and we can use them to control the behavior of our classes and objects.
+
+***1. Private Access Modifier***
+
+The `private` access modifier is the most restrictive of the access modifiers. **Members declared with the private access modifier are only accessible within the class in which they are declared**.
+
+**When we mark a class as** `private` **,other classes cannot inherit it**.
+
+Here's an example to illustrate how `private` access modifier works:
+
+```cs
+public class BankAccount
+{
+    private int _balance;
+
+    public int GetBalance()
+    {
+        return _balance;
+    }
+
+    public void Deposit(int amount)
+    {
+        _balance += amount;
+    }
+
+    public void Withdraw(int amount)
+    {
+        if (_balance - amount >= 0)
+        {
+            _balance -= amount;
+        }
+    }
+}
+```
+
+In this example, the `_balance` field is declared with a `private` access modifier, meaning that we can only access it within the `BankAccount` class.
+
+The `GetBalance()`, `Deposit()`, and `Withdraw()` methods are public members and hence any class outside `BankAccount` can also access them:
+
+```cs
+var account = new BankAccount();
+
+account.Deposit(100);
+var balance = account.GetBalance();
+            
+Console.WriteLine(balance);
+```
+
+However, if we try to set the value of the `_balance` field, we get a compiler error saying **"BankAccount.balance is inaccessible due to its protection level"**.
+
+***When to use*** `private` ***access modifier?***
+
+The `private` access modifier is typically used when a member is intended for internal use only, and should not be accessible from other parts of the program. Thus, it allows us to hide the implementation details of a class and protect its members from unintended access or modification.
+
+***2. Public Access Modifier***
+
+The public access modifier is the most permissive of the access modifiers. **Members declared with the public access modifier are accessible from anywhere in the code, including derived classes**.
+
+**When we declare a class** `public`**, any other class can inherit it**.
+
+Here's an example to show how `public` can be used in classes:
+
+```cs
+public class Calculator
+{
+    public int Value { get; set; }
+    public int IncrementValue(int value)
+    {
+        return value + 1;
+    }
+}
+```
+
+The `Calculator` class has a `Value` property and an `IncrementValue()` method.
+
+Both the `Value` property and the `IncrementValue()` method are declared with a `public` access modifier, so we can access them from outside the `Calculator` class from the `Program` class:
+
+```cs
+var calculator = new Calculator();
+
+calculator.Value = 15;
+var result = calculator.IncrementValue(calculator.Value);
+
+Console.WriteLine(result);
+```
+
+Hence, the `public` access modifier makes it possible to create classes well-defined public interfaces, that we can easily use and test from the other parts of the code.
+
+***3. Protected Access Modifier***
+
+The `protected` keyword implies that the object is accessible **inside the class and in all classes that derive from that class**. We will talk in more detail about inheritance in other sections.
+
+Here's an example showing how `protected` works:
+
+```cs
+public class Shape
+{
+    protected int Width { get; set; }
+    protected int Height { get; set; }
+
+    public virtual int GetArea()
+    {
+        return Width * Height;
+    }
+}
+```
+
+Here, we declare a `Width` and a `Height` property with the `protected` access modifier, meaning that they are only accessible from within the `Shape` class and its derived classes.
+
+The `GetArea()` method is a `public` method and we mark it as virtual, so a derived class can **override** it.
+
+Now, let's create a class that **inherits** from `Shape`:
+
+```cs
+public class Rectangle : Shape
+{
+    public Rectangle(int width, int height)
+    {
+        Width = width;
+        Height = height;
+    }
+}
+```
+
+The use of the `protected` access modifier in `Shape` allows the derived `Rectangle` class to access the `Width` and `Height` fields inherited from the base class:
+
+```cs
+var rectangle = new Rectangle(10, 5);
+            
+var area = rectangle.GetArea();
+            
+Console.WriteLine(area);
+```
+
+Thus, we use the `protected` access modifier in C# for creating specialized derived classes that can access members of a base class.
+
+***4. Internal Access Modifier***
+
+The `internal` keyword specifies that the object is accessible only inside its own assembly but not in other assemblies.
+
+**Members declared with the** `internal` **access modifier are not accessible from outside the assembly (project). It also serves as the default if no explicit access modifier is specified for a class or its members**.
+
+Let's create a class to understand this:
+
+```cs
+internal class Logger
+{
+    internal string LogMessage(string message)
+    {
+        return $"Logged at {DateTime.Now}, Message: {message}";
+    }
+}
+```
+
+Here, we have a `LogMessage()` method declared with the `internal` access modifier. This restricts the method access to only within the same assembly:
+
+```cs
+var logger = new Logger();
+
+var messageLog = logger.LogMessage("This is a message");
+
+Console.WriteLine(messageLog);
+```
+
+Let's add another project named `AnotherAssembly` to our existing project, and create a class to try to access our `Logger` class:
+
+```cs
+public class ExternalLogger
+{
+    public void ExternalLogMessage(string message)
+    {
+        var logger = new AccessModifiersInCsharp.Logger();
+        logger.LogMessage(message);
+    }
+}
+```
+
+Here, if we try to instantiate the `Logger` class, or to access the `LogMessage()` method that exists in the `AccessModifiersInCsharp` assembly, we get a compilation error **"inaccessible due to its protection level"**.
+
+In conclusion, the `internal` access modifier makes it possible to create classes that are useful within the same assembly but are not part of the public API.
+
+***5. Protected Internal Access Modifier***
+
+The `protected internal` access modifier is a combination of `protected` and `internal`. As a result, we can **access the protected internal member only in the same assembly or in a derived class in other assemblies (projects)**.
+
+Let's modify the existing `Logger` class:
+
+```cs
+internal class Logger
+{
+    protected internal string LogMessage(string message)
+    {
+        return $"Logged at {DateTime.Now}, Message: {message}";
+    }
+}
+```
+
+Here, we have modified the `LogMessage()` method to mark it with `protected internal` access modifier.
+
+Now, let's create a derived class `DerivedLogger`:
+
+```cs
+class DerivedLogger : Logger
+{
+    public string LogMessageFromDerivedClass (string message)
+    {
+        return $"Derived Log: {LogMessage(message)}";
+    }
+}
+```
+
+Here, we create a `LogMessageFromDerivedClass()` method that calls the `LogMessage()` method in the `Logger` class.
+
+Since `DerivedLogger` is a derived class of `Logger`, it can access the `LogMessage()` method because it is declared with the `protected internal` access modifier.
+
+Thus, by using the `protected internal` access modifier, we can expose members that are needed for customization and derivation, but not for direct used by external code.
+
+***6. Private Protected Access Modifier***
+
+The `private protected` access modifier is a combination of private and protected keywords. We can **access members inside the containing class or in a class that derives from a containing class, but only in the same assembly (project)**. Therefore, if we try to access it from another assembly, we will get an error.
+
+Let's create a class to understand this better:
+
+```cs
+public class Employee
+{
+    private protected int EmployeeId {get; set;}
+    private protected string Name {get; set;}
+    private protected double Salary {get; set;}
+
+    public virtual string GetEmployeeDetails()
+    {
+        return $"Employee ID: {EmployeeId}, Name: {Name}, Salary: {Salary}";
+    }
+}
+```
+
+The `Employee` class has three `private protected` properties, `EmployeeId`, `Name`, and `Salary`. We can access these properties from within the same class and any derived classes in the same project.
+
+Let's create a `Manager` class, in which we derive from `Employee`:
+
+```cs
+public class Manager : Employee
+{
+    public override string GetEmployeeDetails()
+    {
+        EmployeeId = 1;
+        Name = "Jacob";
+        Salary = 90000;
+
+        var employee = new Employee();
+        employee.EmployeeId = 2;
+        
+        return $"Manager Details: {base.GetEmployeeDetails()}";
+    }
+}
+```
+
+The class overrides the `GetEmployeeDetails()` method to show the employee details. Here, we have the access to the properties of the `Employee` class as `Manager` is a derived class within the same assembly.
+
+However, if we try instantiate the `Employee` class from here and access the `EmployeeId` property, we get a compilation error, **"Cannot access protected member 'Employee.EmployeeId' via a qualifier of type 'Employee'; the qualifier must be of type 'Manager' (or derived from it)"**. This is because we are trying to access a protected member of the base class from the derived class through the base class's instance.
+
+Let's create another derived class `ExternalManager` that resides in another assembly than the `Employee` class:
+
+```cs
+public class ExternalManager : Employee
+{
+    public override string GetEmployeeDetails()
+    {
+        EmployeeId = 3;
+        Name = "David";
+        Salary = 80000;
+        return $"ExternalManager Details: {base.GetEmployeeDetails()}";
+    }
+}
+```
+
+Here, the `ExternalManager` class is derived from `Employee`. However, as we define it in an external assembly, we get a compilation error, **“‘Employee.EmployeeId’ is inaccessible due to its protection level”**. We encounter similar errors for the other properties `Name`, and `Salary`.
+
+Thus, by using `private protected` access modifier, we can restrict access to certain members of our base classes to only the derived classes within the same assembly, while still allowing those derived classes to inherit and extend the functionality of the base classes.
+
+***OVERVIEW***
+
+It's important to choose the appropriate access modifier for your members based on your intended use and the level of security you need for your application. The following is the summary of the access modifier discussed above:
+
+1. `private`: A `private` member can only be accessed within the same class. It is not accessible outside the class.
+
+2. `public`: A `public` member can be accessed from anywhere, including outside the class, in any assembly.
+
+3. `protected`: A `protected` member can only be accessed within the same class and any derived classes. It is not accessible outside the class hierarchy.
+
+4. `internal`: A `internal` member can be accessed from any code within the same assembly, but not from other assemblies.
+
+5. `protected-internal`: A `protected-internal` member can be accessed from the same assembly, as well as from any derived classes, whether they are in the same assembly or not.
+
+6. `private-protected`: A `private-protected` member can only be accessed within the same class hierarchy, specifically within the containing class or any derived classes that are declared in the same assembly as the containing class.
+
+____
+
+### **Section 5.3: Instance Variable And Local Variable**
 
 In C#, an instance variable (also known as a member variable) is a variable that belongs to an instance of a class. It is declared inside the class, but outside any method, constructor, or property, and is used to store data that is associated with a particular object created from the class. Instance variables are initialized when an object of the class is created, and they retain their values as long as the object exists.
 
@@ -1663,7 +1980,35 @@ The main difference between instance variables and local variables is their scop
 
 ____
 
-### **Section 5.3: `this` Keyword**
+### **Section 5.4: `{ get; set; }`**
+
+In C#, `{ get; set; }` is a shorthand syntax for defining a property with a getter and a setter method. It is called an auto-implemented property:
+
+```cs
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+```
+
+In this example, `Person` class has two properties: `Name` and `Age`. Both properties are defined using the `{ get; set; }` syntax. This means that C# will automatically generate a private backing field for each property, and also generated the getter and setter methods for each property.
+
+You can then use these properties to get and set the values of the corresponding fields. For example:
+
+```cs
+Person p = new Person();
+p.Name = "John";
+p.Age = 30;
+```
+
+Here, we create a new `Person` object and set `Name` and `Age` properties using the auto-implemented properties.
+
+Auto-implemented properties can be a convenient way to define simple properties that just get and set a value without any additional logic. However, if you need to add additional logic or validation to the getter or setter method, you will need to define a traditional property with an explicit backing field and custom getter and setter methods.
+
+____
+
+### **Section 5.5: `this` Keyword**
 
 In C#, `this` is a keyword that refers to the current instance of the class. It is mainly used to differentiate between instance variables and local variables or parameters that have the same name.
 
@@ -1730,33 +2075,54 @@ public class Person
 }
 ```
 
-In this example, we have multiple constructors that call each other using `this`. The first constructor is the default constructor that calls the parameterized constructor with default values. The other constructors call the parameterized constrtuctor with different combinations of parameters.
+In this example, we have multiple constructors that call each other using `this`. The first constructor is the default constructor that calls the parameterized constructor with default values. The other constructors call the parameterized constructor with different combinations of parameters.
 
 This way, we can reuse the code in the parameterized constructor without duplicating it **(Only define two instance variables and use for all constructor)**.
 
 ____
 
-### **Section 5.4: Constructor**
+### **Section 5.6: Constructor**
 
-In C#, a constructor is a special method that is automatically called when an instance of a class is created. Its purpose is to initilaize the object's state and set its initial values.
+In C#, a constructor is a special method that is automatically called when an instance of a class is created. Its purpose is to initialize the object's state and set its initial values.
 
 There are several ways to create a constructor in a class, depending on your requirements. Here are some methods to create a constructor with explanations :
 
 ***1. Default Constructor***
 
-The default constructor is a constructor that takes no arguments and is automatically created by the compiler if you do not define any other constructor. Its purpose is to initialize all fields to their default values.
-Here is an example of a default constructor :
+A default constructor is a constructor that is automatically generated by the compiler if no constructor is defined explicitly in a class. It is a parameter-less constructor that initializes all instance variables to their default values, which are null for reference types and zero for value types.
+
+The default constructor can be useful if you want to create an object of a class without specifying any initial values for its instance variables. For example, suppose you have a `Person` class with instance variables for the person's name and age:
 
 ```cs
-public class MyClass
+public class Person
 {
-    public int MyProperty { get; set; }
-    
-    public MyClass() // Not taking arguments
+    private string name;
+    private int age;
+
+    // Default constructor
+    public Person()
     {
-        MyProperty = 0;
+        name = null; // or name = ""
+        age = 0;
     }
+
+    // Parameterized constructor
+    public Person(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Other methods and properties
 }
+```
+
+In this example, we have defined a default constructor that sets the person's name to `null` or `""` and age to `0`. We have also defined a parameterized constructor that takes the person's name and age as parameters and sets the instance variables accordingly.
+
+If you create an object of the `Person` class without specifying any initial values, the default constructor will be called automatically:
+
+```cs
+Person p = new Person(); // calls default constructor
 ```
 
 ***2. Parameterized Constructor***
@@ -1809,44 +2175,76 @@ public class MyClass
 }
 ```
 
-Copy constructor are useful when you need to create a new object that is a copy of an exisiting object, rather than just copying its reference.
+Copy constructor are useful when you need to create a new object that is a copy of an existing object, rather than just copying its reference.
 
 Here are some situations where you might want to use a copy constructor:
 
-- When you need to create a new object that has the same values as an exisitng object, but with some modifications. For example, you might want to create a new `Person` object that has the same name and age as an existing `Person`, but with a different address.
-- When you need to create a new object that is a deep copy of an existing object. A deep copy is a copy of the object and all of its contetns. This is useful when the original object contains othe objects that need to be copied as well.
+- When you need to create a new object that has the same values as an existing object, but with some modifications. For example, you might want to create a new `Person` object that has the same name and age as an existing `Person`, but with a different address.
+- When you need to create a new object that is a deep copy of an existing object. A deep copy is a copy of the object and all of its contents. This is useful when the original object contains other objects that need to be copied as well.
 - When you want to create a new object that is immutable. An immutable object is an object that cannot be modified after it is created. A copy constructor can be used to create a new immutable object with the same values as the original object.
 
 ***4. Static Constructor***
 
-A static constructor is a constructor that is called only once, when the calss is loaded into memory. Its purpose is to initialize static fields or perform other static initialization.  
-Here is an example of a static constructor :
+A static constructor is a special type of constructor in C# that is used to initialize static fields or perform one-time initialization for a class. It is called automatically by the .NET runtime before any instance of the class is created or any static members are accessed.
+
+Here are some scenarios where you might want to use a static constructor:
+
+1. Initializing static fields: If you have a static field that needs to be initialized to a specific value before any instances of the class are created, you can use a static constructor to do this.
+2. Loading native libraries: If your class uses native libraries, you can use a static constructor to load the libraries before any instances of the class are created.
+3. Initializing loggers: If your class needs to perform some other type of one-time setup before any instances of the class are created, you can use a static constructor to do this.
+4. Performing other one-time setup: If your class needs to perform some other type of one-time setup before any instances of the class are cerated, you can use a static constructor to do this.
+
+**It's important to note that a class can only have one static constructor**, and it can't be called directly from code. Instead, it is called automatically by the .NET runtime before any instance of the class is created or any static members are accessed.
+
+Here is an example of class with a static constructor that initializes a static field:
 
 ```cs
 public class MyClass
 {
-    public static int MyStaticProperty { get; set; } // static constructor
-    
+    private static int _myStaticField;
+
     static MyClass()
     {
-        MyStaticProperty = 0;
+        _myStaticField = 42;
+    }
+
+    public void DoSomething()
+    {
+        // Do something with _myStaticField
     }
 }
 ```
+
+In this example, the static constructor initializes the `_myStaticField` field to the value 42 before any instances of the `MyClass` class are created.
 
 ***5. Chained Constructor***
 
-A chained constructor is a constructor that calls another constructor in the same class using `this` keyword. This allows you to reuse initialization logic and avoid duplicating code.  
-Here is an example of chained constructor :
+A chained constructor in C# is a constructor that calls another constructor in the same class using the `this` keyword. This allows you to reuse code from one constructor in another constructor, which can be useful for reducing code duplication and making your code more maintainable.
+
+Here's an example of a class with a chained constructor:
 
 ```cs
 public class MyClass
 {
-    public int MyProperty { get; set; }
-    
-    public MyClass(int myProperty) : this()
+    private int _myField;
+
+    public MyClass() : this(0)
     {
-        MyProperty = myProperty;
+    }
+
+    public MyClass(int myField)
+    {
+        _myField = myField;
     }
 }
 ```
+
+In this example, the `MyClass` class has two constructors: a parameter-less constructor that calls the parameterized constructor with a default value of 0, and a parameterized constructor that initializes the `_myField` field with the value passed as an argument.
+
+You might want to use a chained constructor in scenarios where you have multiple constructors that share common initialization code. By using a chained constructor, you can avoid duplicating the initialization code in each constructor and instead have it in one place.
+
+Chained constructors can also be useful for providing default values for optional parameters. For example, you might have a parameterized constructor that takes several arguments, and then provide a chained constructor that only takes some of those arguments and provides default values for the rest.
+
+It's important to note that chained constructors must be the first statement in a constructor, and you can only chain to constructors in the same class.
+
+____
