@@ -1,0 +1,16 @@
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\bin\Debug\net5.0\S2_Challenge_3.exe
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\bin\Debug\net5.0\S2_Challenge_3.deps.json
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\bin\Debug\net5.0\S2_Challenge_3.runtimeconfig.json
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\bin\Debug\net5.0\S2_Challenge_3.runtimeconfig.dev.json
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\bin\Debug\net5.0\S2_Challenge_3.dll
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\bin\Debug\net5.0\S2_Challenge_3.pdb
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\S2_Challenge_3.csproj.AssemblyReference.cache
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\S2_Challenge_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\S2_Challenge_3.AssemblyInfoInputs.cache
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\S2_Challenge_3.AssemblyInfo.cs
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\S2_Challenge_3.csproj.CoreCompileInputs.cache
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\S2_Challenge_3.dll
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\refint\S2_Challenge_3.dll
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\S2_Challenge_3.pdb
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\S2_Challenge_3.genruntimeconfig.cache
+C:\Users\limzz\OneDrive\Desktop\C_Sharp\01_Complete_C_Sharp_Masterclass_Udemy\02_DataTypes_And_Variables\S2_Challenge_3\S2_Challenge_3\obj\Debug\net5.0\ref\S2_Challenge_3.dll
