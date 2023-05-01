@@ -48,13 +48,13 @@ namespace Section6
 
         public int GetVolume()
         {
-            return this.length*this.width*this.height;
+            return this.length*this.Width*this.height;
         }
 
         public void DisplayInfo()
         {
-            volume = length * height * width;
-            Console.WriteLine($"Length is {length} and height is {height} and width is {width} so" +
+            volume = length * height * Width;
+            Console.WriteLine($"Length is {length} and height is {height} and width is {Width} so" +
                 $" the volume is {volume}");
         }
 

@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "yo8OyMn7yosOZ7KjvhRAl5Iz5VJNcnVNFHOSunOv8+SGFqvYivgsckqO23UIfrX7tQfHVrpTPJzidZVwSRB6Rw==",
+  "dgSpecHash": "//IjvXXaSsgB2SdvdnL8ELlYzqAK6p/BiCvrBK1bbEyu0DK3NXaSsNaQDVAsetky4oCitnXrmn504ICZteABNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\limzz\\OneDrive\\Desktop\\C_Sharp\\01_Complete_C_Sharp_Masterclass_Udemy\\06_OOP\\Section6\\Section6\\Section6.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\limwz\\source\\repos\\WeiZhenLim\\CSharp-Documentation\\01_Complete_C_Sharp_Masterclass_Udemy\\06_OOP\\Section6\\Section6\\Section6.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\limwz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\limwz\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\limwz\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\limwz\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }
