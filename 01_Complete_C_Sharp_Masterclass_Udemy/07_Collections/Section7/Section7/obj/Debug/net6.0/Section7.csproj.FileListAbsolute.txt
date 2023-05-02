@@ -1,0 +1,15 @@
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\bin\Debug\net6.0\Section7.exe
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\bin\Debug\net6.0\Section7.deps.json
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\bin\Debug\net6.0\Section7.runtimeconfig.json
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\bin\Debug\net6.0\Section7.dll
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\bin\Debug\net6.0\Section7.pdb
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\Section7.csproj.AssemblyReference.cache
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\Section7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\Section7.AssemblyInfoInputs.cache
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\Section7.AssemblyInfo.cs
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\Section7.csproj.CoreCompileInputs.cache
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\Section7.dll
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\refint\Section7.dll
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\Section7.pdb
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\Section7.genruntimeconfig.cache
+C:\Users\limwz\source\repos\WeiZhenLim\CSharp-Documentation\01_Complete_C_Sharp_Masterclass_Udemy\07_Collections\Section7\Section7\obj\Debug\net6.0\ref\Section7.dll

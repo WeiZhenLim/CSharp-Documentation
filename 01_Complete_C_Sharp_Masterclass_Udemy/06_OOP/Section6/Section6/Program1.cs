@@ -33,7 +33,17 @@ namespace Section6
             box.Width = 5;
             Console.WriteLine($"Box length is {box.GetLength()}.");
             box.DisplayInfo();
+            Console.WriteLine($"Front surface of the box is {box.FrontSurface}");
 
+        }
+    }
+
+    internal class Program3
+    {
+        static void Main(String[] args)
+        {
+            Members member1 = new Members();
+            member1.Introducing(true);
         }
     }
 }

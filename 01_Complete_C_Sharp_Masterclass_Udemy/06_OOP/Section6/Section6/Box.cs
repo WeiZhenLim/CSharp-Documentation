@@ -51,6 +51,11 @@ namespace Section6
             return this.length*this.Width*this.height;
         }
 
+        public int FrontSurface
+        {
+            get { return height * length; }
+        }
+
         public void DisplayInfo()
         {
             volume = length * height * Width;

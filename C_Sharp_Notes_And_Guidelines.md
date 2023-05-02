@@ -1235,7 +1235,7 @@ ____
 
 ### **Section 2.5: Operators**
 
-Opertators are used to perform operations on variables and values. The example code block below shows the commonly used operators in C# programming (exclusive of the basic mathematical operator and equality operators).
+Operators are used to perform operations on variables and values. The example code block below shows the commonly used operators in C# programming (exclusive of the basic mathematical operator and equality operators).
 
 ```cs
 static void Main(string[] args)
@@ -1580,9 +1580,13 @@ Object-oriented programming (OOP) is a programming paradigm that uses objects to
 
 Each fundamental concepts has its own function and usage, which will be further discussed in the following section.
 
-### **Section 5.1: Classes**
+### **Section 5.1: Classes and Members**
 
-In C#, a class is a blueprint or template for creating objects that share the same characteristics and behavior. A class defines a set of properties, methods, and events that describe the behavior of its objects. Here's an example of a simple class in C# :
+In C#, a class is a blueprint or template for creating objects that share the same characteristics and behavior. A class defines a set of members, such as properties, methods, and events that describe the behavior of its objects.
+
+Members are the data and behaviors defined within a class. Members can be divided into two categories: fields (data) and methods (behaviors). In addition to fields and methods, classes can also have other members such as properties, events, and nested classes. These members provide additional functionality and organization within the class.  
+
+Here's an example of a simple class in C# :
 
 ```cs
 public class Person
@@ -1631,7 +1635,6 @@ human.SayHello();
 ```
 
 In this example, we create a new `Person` object and set its `Name` and `Age` properties to "John" and 30 respectively. Note that when you set a property, the corresponding `set` accessor is called and the new value is assigned to the corresponding field. Similarly, when you read a property, the corresponding `get` accessor is called and the value of the corresponding field is returned.
-
 ____
 
 ### **Section 5.2: Access Modifiers Types**
@@ -2004,7 +2007,26 @@ p.Age = 30;
 
 Here, we create a new `Person` object and set `Name` and `Age` properties using the auto-implemented properties.
 
-Auto-implemented properties can be a convenient way to define simple properties that just get and set a value without any additional logic. However, if you need to add additional logic or validation to the getter or setter method, you will need to define a traditional property with an explicit backing field and custom getter and setter methods.
+Auto-implemented properties can be a convenient way to define simple properties that just get and set a value without any additional logic. However, if you need to add additional logic or validation to the getter or setter method, you will need to define a traditional property with an explicit backing field and custom getter and setter methods. For example:
+
+```cs
+public class MyClass
+{
+    private string _myProperty;
+    
+    public string MyProperty 
+    {
+        get 
+        { 
+            return _myProperty.ToUpper(); // custom getter that returns the property in uppercase
+        }
+        set 
+        { 
+            _myProperty = value.Trim(); // custom setter that trims the input value before setting it to the property
+        }
+    }
+}
+```
 
 ____
 
@@ -2249,3 +2271,76 @@ It's important to note that chained constructors must be the first statement in 
 
 ____
 
+### **Section 5.7: Finalizers and Destructors**
+
+In C#, a finalizer is a method that gets called by the garbage collector just before an object is destroyed. Finalizers are declared by defining a method with the following syntax:
+
+```cs
+~MyClass()
+{
+    // Finalizer code here
+}
+```
+
+Note the tilde ('~') character in front of the method name. Finalizers are typically used to release un-managed resources (such as file handles or network sockets) that an object may have acquired during its lifetime.
+
+A destructor, on the other hand, is a special method that gets called automatically by the runtime when an object is about to be destroyed. Unlike finalizers, destructors are defined using the `~ClassName()` syntax, where `ClassName` is the name of the class:
+
+```cs
+public class MyClass
+{
+    // Constructor here
+
+    ~MyClass()
+    {
+        // Destructor code here
+    }
+}
+```
+
+Destructors are used to perform cleanup operations on managed resources (such as closing open database connections or releasing other objects) that are no longer needed.
+
+It's important to note that while finalizers and destructors serve similar purpose, they are not interchangeable. Finalizers are non-deterministic, meaning that you cannot control when they will be executed. In contrast, destructors are deterministic, meaning that they will always be called when an object is destroyed, and their execution order is well-defined. Therefore, it's generally recommended to use destructors rather than finalizers whenever possible.
+
+____
+
+## **Section 6.0: Collections in C#**
+
+In C#, a collection is a group of objects that can be treated as a single entity. Collections allow you to store, manipulate, and retrieve data in an organized and efficient manner.
+
+There are many types of collections in C#, including:
+
+1. List: A dynamic collection of objects that can be accessed by index. It is the most commonly used collection type.
+2. Dictionary: A collection of key/value pairs that can be accessed by key.
+3. HashSet: A collection of unique objects.
+4. Queue: A collection that allows you to add items to the end and remove items from the beginning.
+5. Stack: A collection that allows you to add items to the top and remove items from the top.
+6. SortedList: A collection of key/value pairs that is sorted by key.
+7. LinkedList: A collection of nodes that are linked together to form a chain.
+8. ObservableCollection: A dynamic collection that provides notifications when items are added, removed, or changed.
+9. ConcurrentBag: A thread-safe collection that allows for unordered storage of objects.
+
+Each type of collection has its own strength and weaknesses, and the choice of which one to use depends on the specific requirements of your application.
+
+### **Section 6.1: Array**
+
+In C#, an array is a collection of variables of the same type that are referenced by a common name. It is a container object that stores a fixed number of elements of the same type. The elements in an array are accessed by an index, which starts at 0 for the first element and increments by 1 for each subsequent elements.
+
+Arrays are declared by specifying the data type of the array elements, followed by square brackets `[]`. For example, the following code declares an array of integers with a length of 3:
+
+```cs
+int[] numbers = new int[3];
+```
+
+This code creates an array named "numbers" with a length of 3, meaning it can store 3 integer values.
+
+Array elements can be initialized when the array is declared or at a later time using the index of the element. Here is an example:
+
+```cs
+int[] numbers = {1,2,3};
+numbers[0] = 4; // sets the first element to 4
+```
+
+In this example, an array of integers is declared and initialized with three values using the curly brace notation. The first element of the array is then changed to 4 by assigning it to the value of index 0.
+
+Arrays are commonly used to store a collection of related data items, such as a list of strident grades or a series of daily temperatures. They are also frequently used in algorithms, where data needs to be processed sequentially or accessed in random order.
