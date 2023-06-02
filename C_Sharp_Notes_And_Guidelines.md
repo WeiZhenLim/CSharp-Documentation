@@ -336,7 +336,7 @@ Boolean isSaved;
 #### **9. Implicit Types**
 
 Do use implicit type **var** for local variable declarations.  
-Exception: primitive types (int, string, doulbe, etc) use predefined names.
+Exception: primitive types (int, string, double, etc) use predefined names.
 
 ```cs
 var stream = File.Create(path);
@@ -386,7 +386,7 @@ public interface IShapeCollection
 #### **12. File Names**
 
 Do name source file according to their main classes.  
-Exception: File names with partial classess reflect their source or purpose, e.g. designer, generated, etc.
+Exception: File names with partial classes reflect their source or purpose, e.g. designer, generated, etc.
 
 ```cs
 // Located in Task.cs
@@ -402,7 +402,7 @@ public partial class Task
 } 
 ```
 
-**Why :** To be consistent with the Microsoft practices. Files are alphabetically sorted and partial classess remain adjacent.
+**Why :** To be consistent with the Microsoft practices. Files are alphabetically sorted and partial classes remain adjacent.
 <br/>
 
 #### **13. Namespaces**
@@ -548,7 +548,7 @@ public enum Coin
 }
 ```
 
-**Why :** To be consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in indentifiers.
+**Why :** To be consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.
 <br/>
 
 ### ***Layout Conventions***
@@ -559,7 +559,7 @@ Good layout uses formatting to emphasize the structure of your code and to make 
 - Write only one statement per line.
 - Write only one declaration per line.
 - If continuation lines are not indented automatically, ident them one tab stop (four spaces).
-- Add at least one blank in between method definitions and property definations.
+- Add at least one blank in between method definitions and property definitions.
 - Use parentheses to make clauses in an expression apparent, as shown in the following code.
 
 ```cs
@@ -573,7 +573,7 @@ if ((val1 > val2) && (val1 > val3))
 
 ### ***Place Using Directives Outside Namespace Declaration***
 
-When a using directive is outside a namespace devlaration, that imported namespace is its fully qualified name. In addition to that, it is much more easier to use, read, and less prone to error.
+When a using directive is outside a namespace declaration, that imported namespace is its fully qualified name. In addition to that, it is much more easier to use, read, and less prone to error.
 
 ```cs
 using Azure;
@@ -638,7 +638,7 @@ Use the concise syntax when you initialize arrays on the declaration line. In th
 string[] vowels1 = {"a","e","i","o","u"};
 ```
 
-If you use explicit instatiation, you can use **`var`**.
+If you use explicit instantiation, you can use **`var`**.
 
 ```cs
 var vowels2 = new string[] {"a","e","i","o","u"};
@@ -801,7 +801,7 @@ In C#, data types are categorized based on how they store their value in the mem
 
 ### ***Value Type***
 
-A data type is a value type if it holds a data value within its own memory space. It means the variable of these data types directly cotain values.
+A data type is a value type if it holds a data value within its own memory space. It means the variable of these data types directly contain values.
 
 ```cs
 int i = 100;
@@ -835,7 +835,7 @@ Unlike value types, a reference type doesn't store its value directly. Instead, 
 string s = "Hello World!!";
 ```
 
-The folloings are reference type data types:
+The followings are reference type data types:
 
 - string
 - Arrays (even if their elements are value types)
@@ -890,7 +890,7 @@ In C#, we can use the `Convert` class to perform type conversion. The `Convert` 
 |Method|Description|
 |---|---|
 |`ToBoolean()`|Converts a type to a `Boolean` value|
-|`ToChar()`|Covnerts a type to a `char` type|
+|`ToChar()`|Converts a type to a `char` type|
 |`ToDouble()`|Converts a type to a `double` type|
 |`ToInt16()`|Converts a type to a 16-bit `int` type|
 |`ToString()`|Converts a type to a `string`|
@@ -931,7 +931,7 @@ There are different ways of manipulating string, and in this section, we are goi
 
 Tips: Try to stick with one style throughout your project to maintain consistency.
 
-For this section, the following variables will be used to explain the abovementioned methods of string manipulations.
+For this section, the following variables will be used to explain the above mentioned methods of string manipulations.
 
 ```cs
 // define few variables
@@ -1013,7 +1013,7 @@ ____
 
 **String** is an object of the System.String class. In programming terms, string means sequence of characters.
 
-However, there are some cases where you want to assign empty string to a variable. `string.Empty`, which is equivalent to `""`, is often used as it is considered to be more readable and can help to makle the code more self-documenting.
+However, there are some cases where you want to assign empty string to a variable. `string.Empty`, which is equivalent to `""`, is often used as it is considered to be more readable and can help to make the code more self-documenting.
 
 For example, you might use it when initializing a string variable or when checking whether a string is empty:
 
@@ -1421,7 +1421,7 @@ switch (grade)
 }
 ```
 
-In a 'switch`statement`, the `break` statement is used to exit the switch statement after the ccode block is executed.
+In a 'switch`statement`, the `break` statement is used to exit the switch statement after the code block is executed.
 
 The `default` case is code block that is executed when none of the other cases match the input value. The `default` case is optional and is used to provide a default action when none of the other cases match.
 
@@ -1453,7 +1453,7 @@ ____
 
 ## **Section 4.0: Loops And Loops Control**
 
-Loops in C# are used to excutue a block of code repeatedly until a certain condition is met. There are three types of loops in C#, namely `for`, `while`, and `do-while`. Each loop type has its own syntax and use cases, which will be diccussed in this section.
+Loops in C# are used to execute a block of code repeatedly until a certain condition is met. There are three types of loops in C#, namely `for`, `while`, and `do-while`. Each loop type has its own syntax and use cases, which will be discussed in this section.
 
 ### **Section 4.1: `for` Loops**
 
@@ -2058,49 +2058,6 @@ public class Person
 
 By using `this` in this way, we can avoid naming conflicts between the instance variables and the parameters or local variables.
 
-Additionally, `this` can be used to call other constructors in the same class. This is useful when you have multiple constructors with different parameters, but you want to avoid duplicating code.
-
-Here's an example:
-
-```cs
-public class Person
-{
-    private string name;
-    private int age;
-
-    public Person()
-        : this("Unknown", 0) 
-    {
-    }
-
-    public Person(string name)
-        : this(name, 0)
-    {
-    }
-
-    public Person(int age)
-        : this("Unknown", age)
-    {
-    }
-
-    public Person(string name, int age)
-    {
-        this.name = name;
-        this.age = age;
-    }
-
-    public void Print()
-    {
-        Console.WriteLine("Name: " + this.name);
-        Console.WriteLine("Age: " + this.age);
-    }
-}
-```
-
-In this example, we have multiple constructors that call each other using `this`. The first constructor is the default constructor that calls the parameterized constructor with default values. The other constructors call the parameterized constructor with different combinations of parameters.
-
-This way, we can reuse the code in the parameterized constructor without duplicating it **(Only define two instance variables and use for all constructor)**.
-
 ____
 
 ### **Section 5.6: Constructor**
@@ -2344,3 +2301,89 @@ numbers[0] = 4; // sets the first element to 4
 In this example, an array of integers is declared and initialized with three values using the curly brace notation. The first element of the array is then changed to 4 by assigning it to the value of index 0.
 
 Arrays are commonly used to store a collection of related data items, such as a list of strident grades or a series of daily temperatures. They are also frequently used in algorithms, where data needs to be processed sequentially or accessed in random order.
+
+____
+
+### **Section 6.2: foreach Loop in Collections**
+
+In C#, `foreach` is a loop statement that allows you to iterate through a collection or array of items. It simplifies the syntax for iterating over collections by abstracting away the need to manage an index or iterator.
+
+The basic syntax of a `foreach` loop is as follows:
+
+```cs
+foreach (var item in collection)
+{
+    // Code to execute for each item in the collection
+}
+```
+
+Here, `collection` is the collection or array of items to iterate over, and `item` is a variable that represents the current item in the collection during each iteration of the loop.
+
+For example, consider the following code that iterates over an array of integers and prints each value:
+
+```cs
+int[] numbers = { 1, 2, 3, 4, 5 };
+
+foreach (var number in numbers)
+{
+    Console.WriteLine(number);
+}
+```
+
+The `foreach` loop automatically handles moving through the collection or array one item at a time until it has processed all items.
+
+____
+
+### **Section 6.3: Multidimensional Array**
+
+A multidimensional array in C# is an array that contains other arrays as elements. In other words, it is an array of arrays. Multidimensional arrays can have two or more dimensions,and are often used to represent data that has a grid-like structure, such as a table or a matrix.
+
+In C#, you can create multidimensional array using the following syntax:
+
+```cs
+type[,] arrayName = new type[size1, size2];
+```
+
+For example, to create a two-dimensional array of integers with 3 rows and 3 columns, you could use the following code:
+
+```cs
+int[,] array2D = new int[3, 3]
+{
+    {1,2,3,},
+    {4,5,6},
+    {7,8,9}
+};
+```
+
+To access elements from the array you can do the following:
+
+```cs
+// basic syntax
+value = array[row,column]
+
+// to get the center of the array2D
+centerValue = array2D[1,1]
+```
+
+You can also create arrays with more than two dimensions by adding additional size values to the declaration, separated by commas. For example, to create a three-dimensional array of integers with 2 rows, 3 columns and 4 layers, you could use the following code:
+
+```cs
+int[,,] array3D = new int[2,3,4];
+```
+
+____
+
+### **Section 6.4: Jagged Array**
+
+In C#, a jagged array is an array whose elements are also arrays. Jagged arrays are also known as arrays of arrays. Unlike a multi-dimensional array, a jagged array can have rows of different lengths.
+
+To create a jagged array in C#, you can declare an array of arrays, where each element is an array of a different size. Here's an example:
+
+```css
+int[][] jaggedArray = new int[3][];
+jaggedArray[0] = new int[] { 1, 2, 3 };
+jaggedArray[1] = new int[] { 4, 5 };
+jaggedArray[2] = new int[] { 6, 7, 8, 9 };
+```
+
+In this example, we declare a jagged array with three rows, where each row is an array of integers. We then initialize each row with a new array of a different size.
